@@ -9,29 +9,33 @@ export const OnOff = () => {
     const onStyle = {
         width: '30px',
         height: '20px',
-        border: '2px solid black',
+        border: '1px solid black',
         display: 'inline-block',
         margin: '0px 0px 3px 3px',
         padding: '2px',
-        backgroundColor: on ? 'green' : 'white'
+        borderRadius: '2px',
+        backgroundColor: on ? 'green' : 'white',
+        transition: '0.3s'
     }
     const offStyle = {
         width: '30px',
         height: '20px',
-        border: '2px solid black',
+        border: '1px solid black',
         display: 'inline-block',
         margin: '0px 0px 3px 3px',
         padding: '2px',
-        backgroundColor: on ? 'white' : 'red'
+        borderRadius: '2px',
+        backgroundColor: on ? 'white' : 'red',
+        transition: '0.3s'
     }
     const indicatorStyle = {
         width: '10px',
         height: '10px',
         borderRadius: '5px',
         margin: '0px 0px 3px 3px',
-        border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: on ? 'green' : 'red'
+        backgroundColor: on ? 'green' : 'red',
+        transition: '0.5s'
     }
 
 
