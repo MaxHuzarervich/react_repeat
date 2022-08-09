@@ -1,10 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
-import {OnOff} from "./components/OnOff/OnOff";
-import {AccordionUncontrolled} from "./components/AccordionUncontrolled/AccorcdionUncontrolled";
-import {RatingUncontrolled} from "./components/RatingUncontrolled/RatingUncontrolled";
+import {Rating, RatingType} from "./components/Rating/Rating";
 
 
 function Hello() {
@@ -15,14 +12,17 @@ function Hello() {
 
 
 function App() {
+
+    const [RatingValue, setRatingValue] = useState<RatingType>(0)
+
     return (
         <div>
             {/*<PageTitle title={'This is App Title'}/>*/}
             {/*<PageTitle title={'Hello'}/>*/}
-            {/*<Rating value={3}/>*/}
-            <AccordionUncontrolled titleValue={'Menu'}/>
-            {/*<Accordion collapsed={false} titleValue={'Users'}/>*/}
-            <RatingUncontrolled />
+            <Rating value={RatingValue} onClick={setRatingValue}/>
+            {/*<AccordionUncontrolled titleValue={'Menu'}/>*/}
+            <Accordion collapsed={false} titleValue={'Users'}/>
+            {/*<RatingUncontrolled />*/}
             {/*<Rating value={0}/>*/}
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
