@@ -10,6 +10,7 @@ export function AccordionUncontrolled({titleValue}: propsTypeAccordion) {
 
     return (
         <div>
+            Uncontrolled<br/>
             <AccordionTitle title={titleValue}  onClick={() => setCollapsed(!collapsed)}/>
             {!collapsed && <AccordionBody/>}
         </div>

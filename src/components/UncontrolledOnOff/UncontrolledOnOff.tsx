@@ -1,12 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
-type OnOffType = {
-    on: boolean
+type UncontrolledOnOffType = {
     onChange: (on:boolean) => void
 }
 
-export const OnOff = ({on, onChange}:OnOffType) => {
+export const UncontrolledOnOff = ({onChange}:UncontrolledOnOffType) => {
 
+    const [on, setOn] = useState(false)
 
     const onStyle = {
         width: '30px',
@@ -40,12 +40,14 @@ export const OnOff = ({on, onChange}:OnOffType) => {
         transition: '0.5s'
     }
 
+    const onClicked = () => setOn(true);onChange(true)
+    const offClicked = ()=>{setOn(false); onChange(false)}
 
     return (
 
         <div>
-            <div onClick={()=>{ onChange(true) }} style={onStyle}>ON</div>
-            <div onClick={()=>{ onChange(false) }} style={offStyle}>OFF</div>
+            <div onClick={onClicked} style={onStyle}>ON</div>
+            <div onClick={offClicked} style={offStyle}>OFF</div>
             <div style={indicatorStyle}/>
         </div>
     )

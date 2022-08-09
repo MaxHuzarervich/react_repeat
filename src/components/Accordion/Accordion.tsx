@@ -1,15 +1,17 @@
 import React from "react";
 
 type propsTypeAccordion = {
-    titleValue: string;
-    collapsed: boolean;
+    titleValue: string
+    collapsed: boolean
+    onChange: () => void
 }
 
-export function Accordion({titleValue,collapsed}:propsTypeAccordion) {
+export function Accordion({titleValue,collapsed, onChange}:propsTypeAccordion) {
 
      return (
         <div>
-            <AccordionTitle title={titleValue}/>
+            Controlled<br/>
+            <AccordionTitle title={titleValue} onChange={onChange}/>
             {!collapsed && <AccordionBody/>}
         </div>
     )}
@@ -17,10 +19,11 @@ export function Accordion({titleValue,collapsed}:propsTypeAccordion) {
 
     type propsTypeAccordionTitle = {
         title: string;
+        onChange: () => void
     }
 
-    function AccordionTitle(props: propsTypeAccordionTitle) {
-        return <h3>{props.title}</h3>
+    function AccordionTitle({title,onChange}:propsTypeAccordionTitle) {
+        return <h3 onClick={onChange}>{title}</h3>
     }
 
     function AccordionBody() {

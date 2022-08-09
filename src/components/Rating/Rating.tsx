@@ -1,16 +1,17 @@
 import React from "react";
 
-export type RatingType = 0 | 1 | 2 | 3 | 4 | 5
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 type propsTypeRating = {
-    onClick: (value: RatingType) => void
-    value: RatingType
+    onClick: (value: RatingValueType) => void
+    value: RatingValueType
 }
 
 export function Rating({value,onClick}:propsTypeRating) {
 
     return (
         <div>
+            Controlled<br/>
             <Star selected={value > 0} onClick={onClick} value={1}/>
             <Star selected={value > 1} onClick={onClick} value={2}/>
             <Star selected={value > 2} onClick={onClick} value={3}/>
@@ -22,8 +23,8 @@ export function Rating({value,onClick}:propsTypeRating) {
 
 type propsTypeStar = {
     selected: boolean
-    onClick: (value: RatingType) => void
-    value: RatingType
+    onClick: (value: RatingValueType) => void
+    value: RatingValueType
 }
 
 function Star({selected,value,onClick}:propsTypeStar) {
