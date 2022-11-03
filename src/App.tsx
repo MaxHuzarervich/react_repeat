@@ -9,6 +9,7 @@ import {
     GetValueOfUncontrolledInput,
     TrackValueUncontrolledInput
 } from "./components/UncontrolledInput/uncontrolledInput";
+import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/ControlledInput/controlledInput";
 
 function App() {
 
@@ -41,6 +42,9 @@ function App() {
             {/*<OnOff/>*/}
             <TrackValueUncontrolledInput/>
             <GetValueOfUncontrolledInput/>
+            <ControlledInput/>
+            <ControlledCheckbox/>
+            <ControlledSelect/>
         </div>
     );
 }
