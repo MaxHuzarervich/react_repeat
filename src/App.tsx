@@ -4,8 +4,11 @@ import {Accordion} from "./components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {RatingUncontrolled} from "./components/RatingUncontrolled/RatingUncontrolled";
 import {AccordionUncontrolled} from "./components/AccordionUncontrolled/AccorcdionUncontrolled";
-import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {
+    GetValueOfUncontrolledInput,
+    TrackValueUncontrolledInput
+} from "./components/UncontrolledInput/uncontrolledInput";
 
 function App() {
 
@@ -36,6 +39,8 @@ function App() {
             <UncontrolledOnOff onChange={setSwitchOn}/>{switchOn.toString()}
             {/*<OnOff/>*/}
             {/*<OnOff/>*/}
+            <TrackValueUncontrolledInput/>
+            <GetValueOfUncontrolledInput/>
         </div>
     );
 }

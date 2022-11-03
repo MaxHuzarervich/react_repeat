@@ -40,8 +40,8 @@ export const UncontrolledOnOff = ({onChange}:UncontrolledOnOffType) => {
         transition: '0.5s'
     }
 
-    const onClicked = () => setOn(true);onChange(true)
-    const offClicked = ()=>{setOn(false); onChange(false)}
+    const onClicked = () => setOn(true); onChange(true)
+    const offClicked = () => setOn(false); onChange(false)
 
     return (
 
