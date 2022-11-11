@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Accordion} from "./components/Accordion/Accordion";
+import {AccordionControlled} from "./components/Accordion/AccordionControlled";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {RatingUncontrolled} from "./components/RatingUncontrolled/RatingUncontrolled";
 import {AccordionUncontrolled} from "./components/AccordionUncontrolled/AccorcdionUncontrolled";
@@ -27,8 +27,8 @@ function App() {
         <div>
             {/*<PageTitle title={'This is App Title'}/>*/}
             {/*<PageTitle title={'Hello'}/>*/}
-            {/*<AccordionUncontrolled titleValue={'Menu'}/>*/}
-            {/*<Accordion*/}
+            <AccordionUncontrolled titleValue={'Menu'}/>
+            {/*<AccordionControlled*/}
             {/*    onClick={(value)=>{debugger*/}
             {/*        console.log(`ID ${value}`)}}*/}
             {/*    collapsed={accordionCollapsed}*/}
@@ -53,10 +53,10 @@ function App() {
             {/*<ControlledInput/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
-            <Select
-                value={value}
-                onChange={setValue}
-                items={[{title: 'BMW', value: '1'}, {title: 'Mercedes', value: '2'}, {title: 'Volvo', value: '3'}]}/>
+            {/*<Select*/}
+            {/*    value={value}*/}
+            {/*    onChange={setValue}*/}
+            {/*    items={[{title: 'BMW', value: '1'}, {title: 'Mercedes', value: '2'}, {title: 'Volvo', value: '3'}]}/>*/}
             {/*<Select*/}
             {/*    // onChange={() => console.log('Hello!')}*/}
             {/*    // items={[{title: 'BMW', value: '1'}, {title: 'Mercedes', value: '2'}, {title: 'Volvo', value: '3'}]}/>*/}

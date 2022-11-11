@@ -13,7 +13,9 @@ type propsTypeAccordion = {
     onClick:(value:any)=>void
 }
 
-export function Accordion({titleValue,collapsed, onChange, items, onClick}:propsTypeAccordion) {
+export function AccordionControlled({titleValue,collapsed, onChange, items, onClick}:propsTypeAccordion) {
+
+    console.log('Accordion renderer')
 
      return (
         <div>
@@ -30,6 +32,7 @@ export function Accordion({titleValue,collapsed, onChange, items, onClick}:props
     }
 
     function AccordionTitle({title,onChange}:propsTypeAccordionTitle) {
+        console.log('AccordionTitle renderer')
         return <h3 onClick={onChange}>{title}</h3>
     }
 
@@ -39,6 +42,7 @@ export function Accordion({titleValue,collapsed, onChange, items, onClick}:props
     }
 
     function AccordionBody({items,onClick}:AccordionBodyType) {
+        console.log('AccordionBody renderer')
         return <ul>
             {items.map((i,index) => <li onClick={()=>onClick(i.value)} key={index}>{i.title}</li>)}
         </ul>
