@@ -10,40 +10,42 @@ type propsTypeAccordion = {
     collapsed: boolean
     onChange: () => void
     items: itemType[]
-    onClick:(value:any)=>void
+    onClick: (value: any) => void
 }
 
-export function AccordionControlled({titleValue,collapsed, onChange, items, onClick}:propsTypeAccordion) {
+export const AccordionControlled = React.memo(
+    ({titleValue, collapsed, onChange, items, onClick}: propsTypeAccordion) => {
 
-    console.log('Accordion renderer')
+        console.log('Accordion renderer')
 
-     return (
-        <div>
-            Controlled<br/>
-            <AccordionTitle title={titleValue} onChange={onChange}/>
-            {!collapsed && <AccordionBody items={items} onClick={onClick}/>}
-        </div>
-    )}
+        return (
+            <div>
+                Controlled<br/>
+                <AccordionTitle title={titleValue} onChange={onChange}/>
+                {!collapsed && <AccordionBody items={items} onClick={onClick}/>}
+            </div>
+        )
+    })
 
 
-    type propsTypeAccordionTitle = {
-        title: string;
-        onChange: () => void
-    }
+type propsTypeAccordionTitle = {
+    title: string;
+    onChange: () => void
+}
 
-    function AccordionTitle({title,onChange}:propsTypeAccordionTitle) {
-        console.log('AccordionTitle renderer')
-        return <h3 onClick={onChange}>{title}</h3>
-    }
+const AccordionTitle = ({title, onChange}: propsTypeAccordionTitle) => {
+    console.log('AccordionTitle renderer')
+    return <h3 onClick={onChange}>{title}</h3>
+}
 
-    type AccordionBodyType = {
+type AccordionBodyType = {
     items: itemType[]
-    onClick:(value:any)=>void
-    }
+    onClick: (value: any) => void
+}
 
-    function AccordionBody({items,onClick}:AccordionBodyType) {
-        console.log('AccordionBody renderer')
-        return <ul>
-            {items.map((i,index) => <li onClick={()=>onClick(i.value)} key={index}>{i.title}</li>)}
-        </ul>
-    }
+function AccordionBody({items, onClick}: AccordionBodyType) {
+    console.log('AccordionBody renderer')
+    return <ul>
+        {items.map((i, index) => <li onClick={() => onClick(i.value)} key={index}>{i.title}</li>)}
+    </ul>
+}

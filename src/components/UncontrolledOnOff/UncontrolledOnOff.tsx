@@ -4,7 +4,7 @@ type UncontrolledOnOffType = {
     onChange: (on:boolean) => void
 }
 
-export const UncontrolledOnOff = ({onChange}:UncontrolledOnOffType) => {
+export const UncontrolledOnOff = React.memo(({onChange}:UncontrolledOnOffType) => {
 
     const [on, setOn] = useState(false)
 
@@ -51,4 +51,4 @@ export const UncontrolledOnOff = ({onChange}:UncontrolledOnOffType) => {
             <div style={indicatorStyle}/>
         </div>
     )
-}
+})

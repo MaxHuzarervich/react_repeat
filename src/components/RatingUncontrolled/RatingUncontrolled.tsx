@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {RatingValueType} from "../Rating/Rating";
 
-export function RatingUncontrolled() {
+export const RatingUncontrolled = React.memo(() => {
 
     const [value, setValue] = useState(0)
 
@@ -15,13 +15,13 @@ export function RatingUncontrolled() {
             <Star selected={value > 4} setValue={() => setValue(5)} />
         </div>
     )
-}
+})
 
 type propsTypeStar = {
     selected: boolean
     setValue: () => void
 }
 
-function Star({selected,setValue}: propsTypeStar) {
+const Star = React.memo(({selected,setValue}: propsTypeStar) => {
         return <span onClick={()=>setValue()}>{selected ? <b>star </b> : 'star '}</span>
-}
+})

@@ -12,6 +12,7 @@ import {
 import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/ControlledInput/controlledInput";
 import {Select} from "./components/Select/Select";
 import {log} from "util";
+import {Example1} from "./components/ReactMemo/ReactMemo";
 
 function App() {
 
@@ -27,9 +28,9 @@ function App() {
         <div>
             {/*<PageTitle title={'This is App Title'}/>*/}
             {/*<PageTitle title={'Hello'}/>*/}
-            <AccordionUncontrolled titleValue={'Menu'}/>
+            {/*<AccordionUncontrolled titleValue={'Menu'}/>*/}
             {/*<AccordionControlled*/}
-            {/*    onClick={(value)=>{debugger*/}
+            {/*    onClick={(value)=>{*/}
             {/*        console.log(`ID ${value}`)}}*/}
             {/*    collapsed={accordionCollapsed}*/}
             {/*    onChange={() => setAccordionCollapsed(!accordionCollapsed)}*/}
@@ -50,7 +51,7 @@ function App() {
             {/*<OnOff/>*/}
             {/*<TrackValueUncontrolledInput/>*/}
             {/*<GetValueOfUncontrolledInput/>*/}
-            {/*<ControlledInput/>*/}
+            <ControlledInput/>
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
             {/*<Select*/}
@@ -60,6 +61,7 @@ function App() {
             {/*<Select*/}
             {/*    // onChange={() => console.log('Hello!')}*/}
             {/*    // items={[{title: 'BMW', value: '1'}, {title: 'Mercedes', value: '2'}, {title: 'Volvo', value: '3'}]}/>*/}
+            {/*<Example1/>*/}
         </div>
     );
 }

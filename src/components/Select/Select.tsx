@@ -1,5 +1,5 @@
 import styles from './Select.module.css'
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 type itemType = {
     title: string
@@ -12,7 +12,7 @@ type selectType = {
     items: itemType[]
 }
 
-export const Select = ({items, onChange, value}: selectType) => {
+export const Select = React.memo(({items, onChange, value}: selectType) => {
 
     const [active, setActive] = useState<boolean>(false)
     const [hoveredElement, setHoveredElement] = useState(value)
@@ -31,7 +31,6 @@ export const Select = ({items, onChange, value}: selectType) => {
     const selectedItem = items.find(el => el.value === value)
     const hoveredItem = items.find(el => el.value === hoveredElement)
     const onKeyUp = (e: React.KeyboardEvent<HTMLDivElement>) => {
-        debugger
         if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
             for (let i = 0; i < items.length; i++) {
                 if (items[i].value === hoveredElement) {
@@ -70,4 +69,4 @@ export const Select = ({items, onChange, value}: selectType) => {
             </div>}
         </div>
     )
-}
+})

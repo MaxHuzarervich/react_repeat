@@ -1,7 +1,7 @@
-import {ChangeEvent, useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 
 
-export const ControlledInput = () => {
+export const ControlledInput = React.memo(() => {
     const [parentValue, setParentValue] = useState('')
 
     const change = (e: ChangeEvent<HTMLInputElement>) => {
@@ -9,9 +9,9 @@ export const ControlledInput = () => {
     }
 
     return <input value={parentValue} onChange={change}/>
-}
+})
 
-export const ControlledCheckbox = () => {
+export const ControlledCheckbox = React.memo(() => {
     const [value, setValue] = useState<boolean>(true)
 
     const change = (e: ChangeEvent<HTMLInputElement>) => {
@@ -21,9 +21,9 @@ export const ControlledCheckbox = () => {
     return <div>
         <input type={'checkbox'} checked={value} onChange={change}/>
     </div>
-}
+})
 
-export const ControlledSelect = () => {
+export const ControlledSelect = React.memo(() => {
     const [value, setValue] = useState('1')
 
     const change = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -36,4 +36,4 @@ export const ControlledSelect = () => {
         <option value={'2'}>2</option>
         <option value={'3'}>3</option>
     </select>
-}
+})
