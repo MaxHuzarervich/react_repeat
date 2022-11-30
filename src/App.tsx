@@ -1,18 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
-import {AccordionControlled} from "./components/Accordion/AccordionControlled";
-import {Rating, RatingValueType} from "./components/Rating/Rating";
-import {RatingUncontrolled} from "./components/RatingUncontrolled/RatingUncontrolled";
-import {AccordionUncontrolled} from "./components/AccordionUncontrolled/AccorcdionUncontrolled";
-import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import {
-    GetValueOfUncontrolledInput,
-    TrackValueUncontrolledInput
-} from "./components/UncontrolledInput/uncontrolledInput";
-import {ControlledCheckbox, ControlledInput, ControlledSelect} from "./components/ControlledInput/controlledInput";
-import {Select} from "./components/Select/Select";
-import {log} from "util";
-import {Example1} from "./components/ReactMemo/ReactMemo";
+import {RatingValueType} from "./components/Rating/Rating";
+import {LikeUseCallback} from "./components/ReactUseMemo/ReactUseMemo";
+
 
 function App() {
 
@@ -26,6 +16,10 @@ function App() {
 
     return (
         <div>
+            <LikeUseCallback/>
+            {/*<DifficultCountingExampleUseMemo/>*/}
+            <hr/>
+            {/*<HelpsToReactMemo/>*/}
             {/*<PageTitle title={'This is App Title'}/>*/}
             {/*<PageTitle title={'Hello'}/>*/}
             {/*<AccordionUncontrolled titleValue={'Menu'}/>*/}
@@ -51,7 +45,7 @@ function App() {
             {/*<OnOff/>*/}
             {/*<TrackValueUncontrolledInput/>*/}
             {/*<GetValueOfUncontrolledInput/>*/}
-            <ControlledInput/>
+            {/*<ControlledInput/>*/}
             {/*<ControlledCheckbox/>*/}
             {/*<ControlledSelect/>*/}
             {/*<Select*/}
