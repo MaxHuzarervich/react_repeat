@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
 import {LikeUseCallback} from "./components/ReactUseMemo/ReactUseMemo";
+import {Example_1} from "./components/UseState/UseStateExample";
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
 
     return (
         <div>
-            <LikeUseCallback/>
+            <Example_1/>
+            {/*<LikeUseCallback/>*/}
             {/*<DifficultCountingExampleUseMemo/>*/}
             <hr/>
             {/*<HelpsToReactMemo/>*/}
