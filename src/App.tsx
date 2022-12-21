@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
-import {Set_Interval_UseEffect} from "./components/UseEffect/Example_UseEffect";
-import {Clock} from "./components/Clock/Clock";
+import {SetTimeOutExample} from "./components/UseEffect/Example_2_UseEffcet";
 
 
 function App() {
@@ -17,8 +16,10 @@ function App() {
 
     return (
         <div>
-            <Clock mode={"analog"}/>
-            <Clock mode={"digital"}/>
+            <SetTimeOutExample/>
+            {/*<ResetEffectExample/>*/}
+            {/*<Clock mode={"analog"}/>*/}
+            {/*<Clock mode={"digital"}/>*/}
             {/*<Set_Interval_UseEffect/>*/}
             {/*<Example_UseEffect/>*/}
             {/*<Set_Timeout_UseEffect/>*/}
