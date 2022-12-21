@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
-import {LikeUseCallback} from "./components/ReactUseMemo/ReactUseMemo";
-import {Example_1} from "./components/UseState/UseStateExample";
+import {Set_Interval_UseEffect} from "./components/UseEffect/Example_UseEffect";
+import {Clock} from "./components/Clock/Clock";
 
 
 function App() {
@@ -17,10 +17,14 @@ function App() {
 
     return (
         <div>
-            <Example_1/>
+            <Clock mode={"analog"}/>
+            <Clock mode={"digital"}/>
+            {/*<Set_Interval_UseEffect/>*/}
+            {/*<Example_UseEffect/>*/}
+            {/*<Set_Timeout_UseEffect/>*/}
+            {/*<Example_1/>*/}
             {/*<LikeUseCallback/>*/}
             {/*<DifficultCountingExampleUseMemo/>*/}
-            <hr/>
             {/*<HelpsToReactMemo/>*/}
             {/*<PageTitle title={'This is App Title'}/>*/}
             {/*<PageTitle title={'Hello'}/>*/}
